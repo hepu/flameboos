@@ -1,0 +1,91 @@
+/**
+ * 	Componente: Noticias
+ */
+@colorSelector: #333;
+/**
+ * 	Vista de noticia única
+ */
+#noticia{
+	.imagen{
+		img{
+			max-height: 400px;
+		}
+	}
+	header{
+		#titulo{
+			@media (max-width: 500px){
+				font-size: 18px;
+			}
+		}
+		#fecha_publicacion{
+			
+		}
+	}
+	.contenido{
+		font-size: 16px;
+	}
+}
+/**
+ * 	Vista de Noticias: bloques
+ */
+#noticias_bloques{
+	margin-top: 6px;
+	/**
+	 * 	Sección o columna de noticias
+	 */
+	section{
+		padding: 0 6px;
+		:hover .imagen img{
+			transform: scale(1.05);
+		}
+	}
+	/*
+	 * 	Articulo o contenedor de una noticia
+	 */
+	article{
+		background: #EEE;
+		margin-bottom: 12px;
+		overflow: hidden;
+		.imagen{
+			overflow: hidden;
+			img{
+				transition: 0.4s all ease;
+			}
+		}
+	}
+	/**
+	 * 	Header o encabezado de la noticia
+	 */
+	header{
+		padding: 6px 6px 0;
+		/**
+		 * 	Titulo de la noticia
+		 */
+		.titulo{
+			font-weight: bold;
+			a{
+				color: #333;
+				text-decoration: none;
+			}
+			a:hover{
+				color: #555;
+				text-decoration: underline;
+			}
+			a:visited{
+				color: #333;
+			}
+		}
+		/**
+		 * 	Fecha de publicacion de la noticia
+		 */
+		.fecha_publicacion{
+			font-size: 12px;
+		}
+	}
+	/**
+	 * 	El contenido de la noticia
+	 */
+	.contenido{
+		padding: 0 6px 6px;
+	}
+}
